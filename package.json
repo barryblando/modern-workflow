@@ -1,0 +1,26 @@
+{
+  "name": "modern-workflow",
+  "version": "1.0.0",
+  "description": "travel-site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barryblando/modern-workflow.git"
+  },
+  "keywords": [
+    "travel-site"
+  ],
+  "author": "Retr0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barryblando/modern-workflow/issues"
+  },
+  "homepage": "https://github.com/barryblando/modern-workflow#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
+  }
+}
