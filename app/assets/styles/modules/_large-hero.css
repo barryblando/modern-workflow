@@ -1,0 +1,14 @@
+.large-hero {
+  position: relative;
+}
+
+/* We want the text content to sit on top of its parent large-hero which has position relative, so let's use position absolute */
+.large-hero__text-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* position the element vertically relative to itself */
+  left: 0;
+  /* to make it text center */
+  width: 100%;
+  text-align: center;
+}
