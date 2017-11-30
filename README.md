@@ -1,5 +1,8 @@
 # Travel Site
 
+[![dependencies Status](https://david-dm.org/barryblando/modern-workflow/status.svg)](https://david-dm.org/barryblando/modern-workflow)
+[![devDependencies Status](https://david-dm.org/barryblando/modern-workflow/dev-status.svg)](https://david-dm.org/barryblando/modern-workflow?type=dev)
+
 A hands-on project from [Udemy: Git a Web Developer Job: Mastering The Modern Workflow](https://www.udemy.com/git-a-web-developer-job-mastering-the-modern-workflow/learn/v4)
 
 ## [Live Demo](https://barryblando.github.io/modern-workflow/)
