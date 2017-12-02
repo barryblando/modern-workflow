@@ -93,16 +93,16 @@ Run the following command (all files will be put inside the folder "docs")
   * B: Block - an independent, reusable part of the design
   ```css
   .large-hero {
-   positiion: relative;
+    positiion: relative;
   }
   ```
 
   * E: Element (__) - belongs to a block and cannot be used outside of the block it belongs to
   ```css
   .large-hero__title {
-   font-weight: 300;
-   color: #2f5572;
-   font-size: 4.8rem;
+    font-weight: 300;
+    color: #2f5572;
+    font-size: 4.8rem;
   }
   ```
 
