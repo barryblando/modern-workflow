@@ -29,6 +29,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
     "eslint": "^4.12.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-html": "^4.0.1",
@@ -38,7 +39,6 @@
     "eslint-plugin-react": "^7.5.1",
     "gulp": "^3.9.1",
     "gulp-postcss": "^7.0.0",
-    "gulp-watch": "^4.3.11",
     "postcss-import": "^11.0.0",
     "postcss-nested": "^2.1.2",
     "postcss-simple-vars": "^4.1.0"
