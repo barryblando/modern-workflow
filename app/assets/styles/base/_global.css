@@ -1,6 +1,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #333;
+  /* Default Browser font-size is 16px and use rem to be responsive to its root which is html */
+  /* #px / 16 = #rem */
 }
 
 img {
