@@ -110,3 +110,21 @@ Run the following command (all files will be put inside the folder "docs")
   ```html
   <a class="btn btn--orange btn--large" ... >
   ```
+
+### Responsive Images and Image resolution using srcset
+
+* For Mobile First Patterns to 4K Resolution and Up
+
+  * 1920w ( 1920px Wide of Image), on the source, large images must be put first in order for browser to understand
+
+  [CSS Tricks: Responsive Images](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
+  [Sitepoint: Responsive Images](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)
+
+  ```html
+    <picture>
+      <source media="(min-width: 1380px)" srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w">
+      <source media="(min-width: 990px)" srcset="assets/images/hero--medium.jpg 1380px, assets/images/hero--medium-hi-dpi.jpg 2760w">
+      <source media="(min-width: 640px)" srcset="assets/images/hero--small.jpg, assets/images/hero--small-hi-dpi.jpg">
+      <img src="assets/images/hero--smaller.jpg" alt="Coastal view of ocean and mountains">
+    </picture>
+  ```
