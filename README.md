@@ -23,6 +23,10 @@ You can see a complete working example [here](https://barryblando.github.io/mode
 
 * Support for responsive images and svg icons in legacy browsers
 
+* Mixins for [Media Queries](https://www.emailonacid.com/blog/article/email-development/emailology_media_queries_demystified_min-width_and_max-width)
+
+* Design Patterns -Cleaner Code- using B.E.M
+
 ### Custom Features
 
 * Add scroll to top feature
