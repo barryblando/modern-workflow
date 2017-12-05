@@ -38,6 +38,7 @@
     "eslint-plugin-markdown": "^1.0.0-beta.6",
     "eslint-plugin-react": "^7.5.1",
     "gulp": "^3.9.1",
+    "gulp-minify-css": "^1.2.4",
     "gulp-postcss": "^7.0.0",
     "postcss-import": "^11.0.0",
     "postcss-mixins": "^6.2.0",
