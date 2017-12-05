@@ -4,4 +4,14 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+
+  &--medium {
+    max-width: 976px;
+  }
+
+  .wrapper {
+    /* offset the horizontal padding value of wrapper when it's nested with another wrapper */
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
