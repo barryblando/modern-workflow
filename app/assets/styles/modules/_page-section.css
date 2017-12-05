@@ -3,7 +3,7 @@
   padding: 1.2rem 0;
 
   @mixin atMedium {
-    /* padding top & bottom for each section */
+    /* padding top & bottom for each section when atMedium */
     padding: 4.5rem 0;
   }
 

@@ -1,10 +1,6 @@
 .row {
 
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+  @mixin clearfix {}
 
   @mixin atMedium {
     &__medium-4 {
@@ -12,9 +8,19 @@
       width: 33.33%;
     }
 
+    &__medium-4-larger {
+      /* overwrite width of __medium-4 cause we don't want to change its default value */
+      width: 37%;
+    }
+
     &__medium-8 {
       float: left;
       width: 66.66%;
+    }
+
+    &__medium-8-smaller {
+      /* same here */
+      width: 63%;
     }
   }
 

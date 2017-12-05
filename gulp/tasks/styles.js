@@ -34,9 +34,9 @@ gulp.task('cssInject', function () {
   console.log('-----------Streaming PostCSS');
   return gulp.src(`${paths.SRC}`)
     .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer, perfectionist({ indentSize: 2 })]))
-    .pipe(minifyCss({
+    /* .pipe(minifyCss({
       keepSpecialComments: 0
-    }))
+    })) */
     .on('error', (errorInfo) => {
       console.log(errorInfo.toString());
       this.emit('end');

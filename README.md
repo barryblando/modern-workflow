@@ -117,7 +117,7 @@ Run the following command (all files will be put inside the folder "docs")
 
 ### Responsive Images and Image resolution using srcset
 
-* For Mobile First Patterns to 4K Resolution and Up
+* For Mobile First Patterns to 4K Resolution and Up, I use [SIZZY](http://sizzy.co/) for Responsive Test
 
   * 1920w ( 1920px Wide of Image), on the source, large images must be put first in order for browser to understand
 
@@ -131,4 +131,18 @@ Run the following command (all files will be put inside the folder "docs")
       <source media="(min-width: 640px)" srcset="assets/images/hero--small.jpg, assets/images/hero--small-hi-dpi.jpg">
       <img src="assets/images/hero--smaller.jpg" alt="Coastal view of ocean and mountains">
     </picture>
+  ```
+
+  * sizes means to tell browser that image is going to be displayed at specific sizes instead of full width of the browser, not like hero image that need to take full width of the browser
+  ```html
+  <picture>
+    <source sizes="404px" media="(min-width: 1020px)" srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808w">
+    <source sizes="320px" media="(min-width: 800px)" srcset="assets/images/our-start-portrait.jpg 382w, assets/images/our-start-portrait-hi-dpi.jpg 764w">
+    <img srcset="assets/images/our-start-landscape.jpg" alt="Our founder, Jane Doe">
+  </picture>
+  ```
+
+  * here I didn't use picture element 'cause I just want to swap resolutions only using srcset, media query starting at 970px, so mobile won't download hi res to dpi and just dl & use the ~100viewport of device width.
+  ```html
+  <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
   ```
