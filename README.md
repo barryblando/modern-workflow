@@ -142,7 +142,7 @@ Run the following command (all files will be put inside the folder "docs")
   </picture>
   ```
 
-  * here I didn't use picture element 'cause I just want to swap resolutions only using srcset, media query starting at 970px, so mobile won't download hi res to dpi and just dl & use the ~100viewport of device width.
+  * here I didn't use picture element 'cause I just want to swap resolutions only using srcset, media query starting at 970px, if under 970px mobile won't download hi res / dpi and just dl & use the ~100viewport of device width.
   ```html
   <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
   ```
