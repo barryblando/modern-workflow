@@ -1,8 +1,12 @@
 .generic-content-container {
   p {
+    /* mobile screen default */
+    font-weight: 300;
     line-height: 1.65;
-    margin: 1.8rem 0;
+    /* Set zero except for the bottom and we can adjust the bottom margin of feature-item__title w/ .8rem */
+    margin: 0 0 1.8rem 0;
 
+    /* large screen */
     @mixin atSmall {
       font-size: 1.125rem;
     }

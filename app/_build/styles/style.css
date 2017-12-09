@@ -471,21 +471,22 @@ a {
 }
 
 .large-hero__title {
+  /* mobile screen default */
   font-weight: 300;
   color: #2f5572;
   font-size: 2.4rem;
   margin: 0;
 }
 
-/* Mobile-first pattern using mixins */
-
 @media (min-width: 530px) {
   .large-hero__title {
+    /* large screen default */
     font-size: 4.8rem;
   }
 }
 
 .large-hero__subtitle {
+  /* mobile screen default */
   font-weight: 300;
   color: #2f5572;
   font-size: 1.5rem;
@@ -494,11 +495,13 @@ a {
 
 @media (min-width: 530px) {
   .large-hero__subtitle {
+    /* large screen default */
     font-size: 2.9rem;
   }
 }
 
 .large-hero__description {
+  /* mobile screen default */
   color: #fff;
   font-size: 1.1rem;
   font-weight: 100;
@@ -510,6 +513,7 @@ a {
 
 @media (min-width: 530px) {
   .large-hero__description {
+    /* large screen default */
     font-size: 1.875rem;
   }
 }
@@ -529,11 +533,13 @@ a {
 }
 
 .btn--large {
+  /* mobile screen default */
   padding: 1.1rem 1.9rem;
 }
 
 @media (min-width: 530px) {
   .btn--large {
+    /* large screen default */
     font-size: 1.25rem;
   }
 }
@@ -558,11 +564,13 @@ a {
 }
 
 .wrapper--b-margin {
+  /* mobile screen default */
   margin-bottom: 1rem;
 }
 
 @media (min-width: 530px) {
   .wrapper--b-margin {
+    /* large screen default */
     margin-bottom: 3.875rem;
   }
 }
@@ -585,6 +593,7 @@ a {
 }
 
 .headline {
+  /* mobile screen default */
   font-size: 1.9rem;
   font-weight: 300;
   color: #2f5572;
@@ -592,6 +601,7 @@ a {
 
 @media (min-width: 530px) {
   .headline {
+    /* large screen default */
     font-size: 2.875rem;
   }
 }
@@ -605,11 +615,13 @@ a {
 }
 
 .headline--small {
+  /* mobile screen default */
   font-size: 1.2rem;
 }
 
 @media (min-width: 530px) {
   .headline--small {
+    /* large screen default */
     font-size: 1.875rem;
   }
 }
@@ -647,11 +659,25 @@ a {
   display: table;
 }
 
+/* mobile screen default */
+
+.row--gutters {
+  margin-right: -65px;
+}
+
+.row--gutters > div {
+  padding-right: 65px;
+}
+
 .row__b-margin-until-medium {
   margin-bottom: 1rem;
 }
 
 @media (min-width: 800px) {
+  .row {
+    /* larger screen default */
+  }
+
   .row__b-margin-until-medium {
     margin-bottom: 0;
   }
@@ -662,8 +688,13 @@ a {
   }
 
   .row__medium-4-larger {
-    /* overwrite width of __medium-4 cause we don't want to change its default value */
+    /* overwrite width of __medium-4 cause we'll use it again and its default value */
     width: 37%;
+  }
+
+  .row__medium-6 {
+    float: left;
+    width: 50%;
   }
 
   .row__medium-8 {
@@ -675,20 +706,25 @@ a {
     /* same here */
     width: 63%;
   }
-}
 
-.row--gutters {
-  margin-right: -65px;
-}
+  .row--gutter-large {
+    margin-right: -100px;
+  }
 
-.row--gutters > div {
-  padding-right: 65px;
+  .row--gutters-large > div {
+    padding-right: 100px;
+  }
 }
 
 .generic-content-container p {
+  /* mobile screen default */
+  font-weight: 300;
   line-height: 1.65;
-  margin: 1.8rem 0;
+  /* Set zero except for the bottom and we can adjust the bottom margin of feature-item__title w/ .8rem */
+  margin: 0 0 1.8rem 0;
 }
+
+/* large screen */
 
 @media (min-width: 530px) {
   .generic-content-container p {
@@ -698,4 +734,83 @@ a {
 
 .generic-content-container p a {
   font-weight: 700;
+}
+
+.section-title {
+  font-size: 2.55rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media (min-width: 530px) {
+  .section-title {
+    font-size: 3.75rem;
+  }
+}
+
+.section-title strong {
+  font-weight: 500;
+}
+
+.section-title__icon {
+  /* mobile screen default */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .6rem;
+}
+
+@media (min-width: 530px) {
+  .section-title__icon {
+    /* large screen default */
+    margin-right: .5rem;
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.feature-item {
+  /* mobile screen default */
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 530px) {
+  .feature-item {
+    /* large screen default */
+    padding-left: 94px;
+  }
+}
+
+.feature-item__icon {
+  /* mobile screen default */
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 530px) {
+  .feature-item__icon {
+    /* large screen default */
+    position: absolute;
+    left: 0;
+  }
+}
+
+.feature-item__title {
+  /* mobile screen default */
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-top: .7em;
+  margin-bottom: .8rem;
+  text-align: center;
+}
+
+@media (min-width: 530px) {
+  .feature-item__title {
+    /* large screen default */
+    margin-top: 1em;
+    font-size: 1.875rem;
+    text-align: left;
+  }
 }

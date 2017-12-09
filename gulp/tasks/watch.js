@@ -16,8 +16,8 @@ gulp.task('watch', () => {
     }
   });
 
-  gulp.watch('./app/index.html').on('change', reload);
   gulp.watch('./app/assets/styles/**/*.css', ['cssInject']);
+  gulp.watch('./app/index.html').on('change', reload);
 });
 
 export default reload;

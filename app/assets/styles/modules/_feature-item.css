@@ -1,0 +1,38 @@
+.feature-item {
+  /* mobile screen default */
+  position: relative;
+  padding-bottom: 2.5rem;
+
+  @mixin atSmall {
+    /* large screen default */
+    padding-left: 94px;
+  }
+
+  &__icon {
+    /* mobile screen default */
+    display: block;
+    margin: 0 auto;
+
+    @mixin atSmall {
+      /* large screen default */
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__title {
+    /* mobile screen default */
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: .7em;
+    margin-bottom: .8rem;
+    text-align: center;
+
+    @mixin atSmall {
+      /* large screen default */
+      margin-top: 1em;
+      font-size: 1.875rem;
+      text-align: left;
+    }
+  }
+}

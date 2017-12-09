@@ -2,11 +2,22 @@
 
   @mixin clearfix {}
 
+  /* mobile screen default */
+
+  &--gutters {
+    margin-right: -65px;
+  }
+
+  &--gutters > div {
+    padding-right: 65px;
+  }
+
   &__b-margin-until-medium {
     margin-bottom: 1rem;
   }
 
   @mixin atMedium {
+    /* larger screen default */
     &__b-margin-until-medium {
       margin-bottom: 0;
     }
@@ -17,8 +28,13 @@
     }
 
     &__medium-4-larger {
-      /* overwrite width of __medium-4 cause we don't want to change its default value */
+      /* overwrite width of __medium-4 cause we'll use it again and its default value */
       width: 37%;
+    }
+
+    &__medium-6 {
+      float: left;
+      width: 50%;
     }
 
     &__medium-8 {
@@ -30,13 +46,13 @@
       /* same here */
       width: 63%;
     }
-  }
 
-  &--gutters {
-    margin-right: -65px;
-  }
+    &--gutter-large {
+      margin-right: -100px;
+    }
 
-  &--gutters > div {
-    padding-right: 65px;
+    &--gutters-large > div {
+      padding-right: 100px;
+    }
   }
 }

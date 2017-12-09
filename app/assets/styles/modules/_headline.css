@@ -1,9 +1,11 @@
 .headline {
+  /* mobile screen default */
   font-size: 1.9rem;
   font-weight: 300;
   color: $mainBlue;
 
   @mixin atSmall {
+    /* large screen default */
     font-size: 2.875rem;
   }
 
@@ -16,8 +18,11 @@
   }
 
   &--small {
+    /* mobile screen default */
     font-size: 1.2rem;
+
     @mixin atSmall {
+      /* large screen default */
       font-size: 1.875rem;
     }
   }
