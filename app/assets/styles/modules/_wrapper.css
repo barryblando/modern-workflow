@@ -10,6 +10,30 @@
     max-width: 976px;
   }
 
+  &--no-padding-until-medium {
+    /* mobile screen default */
+    padding-left: 0;
+    padding-right: 0;
+
+    @mixin atMedium {
+      /* large screen default */
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
+  &--no-padding-until-large {
+    /* mobile screen default */
+    padding-left: 0;
+    padding-right: 0;
+
+    @mixin atLarge {
+      /* larger screen default */
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
   .wrapper {
     /* offset the horizontal padding value of wrapper when it's nested with another wrapper */
     padding-left: 0;

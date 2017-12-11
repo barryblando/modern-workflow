@@ -119,7 +119,7 @@ Run the following command (all files will be put inside the folder "docs")
 
 * For Mobile First Patterns to 4K Resolution and Up, I use [SIZZY](http://sizzy.co/) for Responsive Test
 
-  * 1920w ( 1920px Wide of Image), on the source, large images must be put first in order for browser to understand
+  * 1920w ( 1920px Wide of Image), on the source, large images must be put first in order for browser to understand and which one to choose based on the devices width, screen size, and pixel density
 
   [CSS Tricks: Responsive Images](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
   [Sitepoint: Responsive Images](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)

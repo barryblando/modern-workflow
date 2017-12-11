@@ -1,0 +1,48 @@
+.testimonial {
+  background-color: rgba(255, 255, 255, .8);
+  /* give padding bottom 1px to push up against for containing div bottom margin same on all devices*/
+  padding: 0 18px 1px 18px;
+  /* 80px + 18px */
+  margin-bottom: 98px;
+
+  @mixin atLarge {
+    /* larger screen default */
+    margin-bottom: 0;
+    padding: 0 1.8125rem 1px 1.8125rem;
+  }
+
+  &--last {
+    /* set .testimonial margin-bottom & .page-section padding-bottom to 0 for smaller screen */
+    margin-bottom: 0;
+  }
+
+  &__photo {
+    /* half of the size of image file */
+    border-radius: 80px;
+    overflow: hidden;
+    /* set div width & height size same with image file in order to achieve the rounded img */
+    width: 160px;
+    height: 160px;
+    /* In order for paragraph to sync with image 'cause of position, set b-margin to -80px */
+    margin: 0 auto -80px auto;
+    position: relative;
+    top: -80px;
+    border: 6px solid rgba(255, 255, 255, .8);
+  }
+
+  &__title {
+    color: $mainBlue;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__subtitle {
+    color: $mainOrange;
+    text-align: center;
+    font-weight: 400;
+    font-size: .9375rem;
+    margin: .25rem 0 1rem 0;
+  }
+}
