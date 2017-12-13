@@ -7,6 +7,7 @@ import CI from 'postcss-import';
 import P from 'perfectionist';
 import MIX from 'postcss-mixins';
 import MC from 'gulp-minify-css';
+import HR from 'postcss-hexrgba';
 import reload from './watch';
 
 /** (Destructuring) */
@@ -20,8 +21,9 @@ const [
   cssImport,
   perfectionist,
   mixins,
-  minifyCss
-] = [G, PC, AP, pcSV, pcNested, CI, P, MIX, MC];
+  minifyCss,
+  hexrgba
+] = [G, PC, AP, pcSV, pcNested, CI, P, MIX, MC, HR];
 
 /** (Data Structure Paths) */
 
@@ -33,7 +35,7 @@ const paths = {
 gulp.task('cssInject', function () {
   console.log('-----------Streaming PostCSS');
   return gulp.src(`${paths.SRC}`)
-    .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer, perfectionist({ indentSize: 2 })]))
+    .pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer, perfectionist({ indentSize: 2 })]))
     /* .pipe(minifyCss({
       keepSpecialComments: 0
     })) */
