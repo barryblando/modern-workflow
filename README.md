@@ -38,6 +38,8 @@ Follow the instructions below to set up the environment and run this project on 
 ### Prerequisites
 
 * Node.js
+* Yarn
+* ESLint
 
 ### Installing
 
@@ -48,12 +50,12 @@ Follow the instructions below to set up the environment and run this project on 
 
 2. Install dependencies via NPM
 ```
-> npm install
+> yarn install
 ```
 
 3. Install gulp package globally to execute gulp command on your machine
 ```
-> npm install gulp -g
+> yarn global add gulp
 ```
 
 4. Start the website
