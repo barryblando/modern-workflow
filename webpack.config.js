@@ -46,8 +46,6 @@ module.exports = {
     extensions: ['.js'],
   },
   plugins: [
-    // html to inject script
-    // new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'app/index.html') })
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
