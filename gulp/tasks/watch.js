@@ -21,7 +21,7 @@ gulp.task('watch', () => {
   gulp.watch('./app/index.html').on('change', reload);
 });
 
-/* Reload script after Webpack Finished */
+/* Reload script after Webpack is Finished */
 gulp.task('scriptsRefresh', ['scripts'], () => {
   reload();
 });

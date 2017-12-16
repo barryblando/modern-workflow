@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 // Constant with paths
 const paths = {
@@ -21,11 +22,23 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
           options: {
-            // presets: ['@babel/preset-env'],
+            // presets: ['@babel/preset-env'], **use this line if you don't want to use .babelrc**
             // plugins: [require('@babel/plugin-transform-object-rest-spread')],
             cacheDirectory: true
           }
         }],
+      },
+      {
+        // Exposes jQuery for use outside Webpack build, not necessary in this project but for future use
+        test: require.resolve('jquery'),
+        use: [{
+          loader: 'expose-loader',
+          options: 'jQuery'
+        },
+        {
+          loader: 'expose-loader',
+          options: '$'
+        }]
       },
     ]
   },
@@ -35,5 +48,10 @@ module.exports = {
   plugins: [
     // html to inject script
     // new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'app/index.html') })
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
   ]
 };

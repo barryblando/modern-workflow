@@ -1,15 +1,5 @@
 import $ from 'jquery';
-import Person from './modules/Person';
+import MobileMenu from './modules/MobileMenu';
 
-class Adult extends Person {
-  payTaxes() {
-    console.log(`${this.name} now owes $0 in taxes.`);
-  }
-}
+const mobileMenu = new MobileMenu();
 
-const john = new Person('John Doe', 'Blue');
-john.greet();
-
-const jane = new Adult('Jane Smith', 'Orange');
-jane.greet();
-jane.payTaxes();
