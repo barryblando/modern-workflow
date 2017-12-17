@@ -21,6 +21,7 @@
   "homepage": "https://github.com/barryblando/modern-workflow#readme",
   "dependencies": {
     "jquery": "^3.2.1",
+    "jquery-smooth-scroll": "^2.2.0",
     "normalize.css": "^7.0.0",
     "perfectionist": "^2.4.0",
     "run-sequence": "^2.2.0",

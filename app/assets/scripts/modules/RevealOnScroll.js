@@ -4,7 +4,7 @@ import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoi
 class RevealOnScroll {
   constructor(els, offset) {
     // Invoke
-    this.itemsToReveal = els; // collection of items that contain 4 DOM el of feature-item
+    this.itemsToReveal = els; // collection of items that contain DOM el of feature-item
     this.offsetPercentage = offset;
     this.hideInitially();
     this.createWaypoints();
@@ -16,17 +16,21 @@ class RevealOnScroll {
 
   createWaypoints() {
     /* eslint-disable */
-    const that = this;
+    const that = this; // points to main Class
+    // console.log(this.itemsToReveal);
     this.itemsToReveal.each(function () {
       const currentItem = this;
       new Waypoint({
-        element: currentItem, // the DOM to watch
-        handler: function() { // what will happen to element
-          $(currentItem).addClass('reveal-item--is-visible');
+        element: currentItem, // the DOM to watch / trigger
+        handler: function(direction) { // what will happen to element
+          if (direction === 'down') {
+            $(currentItem).addClass('reveal-item--is-visible');
+          } else {
+            $(currentItem).removeClass('reveal-item--is-visible');
+          }
         },
-        offset: that.offsetPercentage // bottom of the viewport
+        offset: that.offsetPercentage // will activated at bottom of the viewport
       });
-
     });
     /* eslint-enable */
   }
