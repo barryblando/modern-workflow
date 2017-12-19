@@ -25,7 +25,8 @@ class StickyHeader {
 
   createHeaderWaypoint() {
     /* eslint-disable */
-    const that = this; // points to main Class
+    // points to main Class
+    const that = this;
     // console.log(this.headerTriggerElement[0]);
     new Waypoint({
       // get the array-ish DOM element title
