@@ -4,7 +4,8 @@ import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoi
 class RevealOnScroll {
   constructor(els, offset) {
     // Invoke
-    this.itemsToReveal = els; // collection of items that contain DOM el of feature-item
+    // collection of items that contain DOM el of feature-item
+    this.itemsToReveal = els;
     this.offsetPercentage = offset;
     this.hideInitially();
     this.createWaypoints();

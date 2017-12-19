@@ -4,17 +4,23 @@ import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoi
 
 class StickyHeader {
   constructor() {
+    // Invoke
     this.siteHeader = $('.site-header');
     this.headerTriggerElement = $('.large-hero__title');
-    this.pageSections = $('.page-section'); // grab any elements with .page-section
-    this.headerLinks = $('.primary-nav a'); // grab all links
+    // grab any elements with .page-section
+    this.pageSections = $('.page-section');
+    // grab all links to reset
+    this.headerLinks = $('.primary-nav a');
     this.createHeaderWaypoint();
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
   }
 
   addSmoothScrolling() {
-    this.headerLinks.smoothScroll();
+    this.headerLinks.smoothScroll({
+      easing: 'swing',
+      speed: 600
+    });
   }
 
   createHeaderWaypoint() {
@@ -22,7 +28,8 @@ class StickyHeader {
     const that = this; // points to main Class
     // console.log(this.headerTriggerElement[0]);
     new Waypoint({
-      element: this.headerTriggerElement[0], // get the array-ish DOM element title
+      // get the array-ish DOM element title
+      element: this.headerTriggerElement[0],
       handler: function(direction) {
         if (direction === 'down') {
           that.siteHeader.addClass('site-header--dark');
@@ -44,7 +51,7 @@ class StickyHeader {
             // extract custom attribute in the div
             const matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
             that.headerLinks.removeClass('is-current-link');
-            $(matchingHeaderLink).addClass('is-current-link');
+            $(matchingHeaderLink).toggleClass('is-current-link');
           }
         },
         offset: '18%'
@@ -57,7 +64,7 @@ class StickyHeader {
             // extract custom attribute in the div
             const matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
             that.headerLinks.removeClass('is-current-link');
-            $(matchingHeaderLink).addClass('is-current-link');
+            $(matchingHeaderLink).toggleClass('is-current-link');
           }
         },
         offset: '-40%'

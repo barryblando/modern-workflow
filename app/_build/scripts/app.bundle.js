@@ -11252,7 +11252,8 @@ var RevealOnScroll = function () {
     _classCallCheck(this, RevealOnScroll);
 
     // Invoke
-    this.itemsToReveal = els; // collection of items that contain DOM el of feature-item
+    // collection of items that contain DOM el of feature-item
+    this.itemsToReveal = els;
     this.offsetPercentage = offset;
     this.hideInitially();
     this.createWaypoints();
@@ -11326,10 +11327,13 @@ var StickyHeader = function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
 
+    // Invoke
     this.siteHeader = (0, _jquery2.default)('.site-header');
     this.headerTriggerElement = (0, _jquery2.default)('.large-hero__title');
-    this.pageSections = (0, _jquery2.default)('.page-section'); // grab any elements with .page-section
-    this.headerLinks = (0, _jquery2.default)('.primary-nav a'); // grab all links
+    // grab any elements with .page-section
+    this.pageSections = (0, _jquery2.default)('.page-section');
+    // grab all links to reset
+    this.headerLinks = (0, _jquery2.default)('.primary-nav a');
     this.createHeaderWaypoint();
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
@@ -11338,7 +11342,10 @@ var StickyHeader = function () {
   _createClass(StickyHeader, [{
     key: 'addSmoothScrolling',
     value: function addSmoothScrolling() {
-      this.headerLinks.smoothScroll();
+      this.headerLinks.smoothScroll({
+        easing: 'swing',
+        speed: 600
+      });
     }
   }, {
     key: 'createHeaderWaypoint',
@@ -11347,7 +11354,8 @@ var StickyHeader = function () {
       var that = this; // points to main Class
       // console.log(this.headerTriggerElement[0]);
       new Waypoint({
-        element: this.headerTriggerElement[0], // get the array-ish DOM element title
+        // get the array-ish DOM element title
+        element: this.headerTriggerElement[0],
         handler: function handler(direction) {
           if (direction === 'down') {
             that.siteHeader.addClass('site-header--dark');
@@ -11370,7 +11378,7 @@ var StickyHeader = function () {
               // extract custom attribute in the div
               var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
               that.headerLinks.removeClass('is-current-link');
-              (0, _jquery2.default)(matchingHeaderLink).addClass('is-current-link');
+              (0, _jquery2.default)(matchingHeaderLink).toggleClass('is-current-link');
             }
           },
           offset: '18%'
@@ -11383,7 +11391,7 @@ var StickyHeader = function () {
               // extract custom attribute in the div
               var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
               that.headerLinks.removeClass('is-current-link');
-              (0, _jquery2.default)(matchingHeaderLink).addClass('is-current-link');
+              (0, _jquery2.default)(matchingHeaderLink).toggleClass('is-current-link');
             }
           },
           offset: '-40%'
