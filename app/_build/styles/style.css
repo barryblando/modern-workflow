@@ -658,11 +658,8 @@ a {
 }
 
 @media (min-width: 1010px) {
-  .page-section--testimonials {
-    /* Will be applied when lazyload class invoked */
-  }
-
   .page-section--testimonials.lazyloaded {
+    /* Will be applied when lazyload class invoked */
     background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
     /* Adjust image size to perfectly cover the containing div */
     background-size: cover;

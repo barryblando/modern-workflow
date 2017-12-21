@@ -33,8 +33,8 @@
     background-color: #e0e6ef;
 
     @mixin atLarge {
-      /* Will be applied when lazyload class invoked */
       &.lazyloaded {
+        /* Will be applied when lazyload class invoked */
         background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
         /* Adjust image size to perfectly cover the containing div */
         background-size: cover;
