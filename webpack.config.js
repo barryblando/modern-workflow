@@ -9,10 +9,13 @@ const paths = {
 
 module.exports = {
   devtool: 'source-map',
-  entry: path.join(paths.JS, 'app.js'),
+  entry: {
+    App: path.join(paths.JS, 'App.js'),
+    Vendor: path.join(paths.JS, 'Vendor.js'),
+  },
   output: {
     path: paths.BUILD,
-    filename: 'app.bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [

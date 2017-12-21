@@ -892,7 +892,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var mobileMenu = new _MobileMenu2.default();
 /* eslint-disable */
 new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '85%');
-new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), '60%');
+new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), '85%');
 /* eslint-enable */
 var stickyHeader = new _StickyHeader2.default();
 var modal = new _Modal2.default();
@@ -11283,11 +11283,14 @@ var RevealOnScroll = function () {
             // what will happen to element
             if (direction === 'down') {
               (0, _jquery2.default)(currentItem).addClass('reveal-item--is-visible');
+              console.log('Added');
             } else {
               (0, _jquery2.default)(currentItem).removeClass('reveal-item--is-visible');
+              console.log('Removed.');
             }
           },
-          offset: that.offsetPercentage // will activated at bottom of the viewport
+          // will activated at bottom of the viewport
+          offset: that.offsetPercentage
         });
       });
       /* eslint-enable */
@@ -11833,7 +11836,7 @@ var Modal = function () {
     key: 'openModal',
     value: function openModal() {
       this.modal.addClass('modal--is-visible');
-      // Don't let the user automatically scroll up to top of the page when it clicked a blank href link
+      // Won't let the user automatically scroll up to top of the page when it clicked a blank href link
       // returning false will prevent that default behavior
       return false;
     }
@@ -11851,4 +11854,4 @@ exports.default = Modal;
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.bundle.js.map
+//# sourceMappingURL=App.bundle.js.map

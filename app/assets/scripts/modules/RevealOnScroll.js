@@ -26,11 +26,14 @@ class RevealOnScroll {
         handler: function(direction) { // what will happen to element
           if (direction === 'down') {
             $(currentItem).addClass('reveal-item--is-visible');
+            console.log('Added');
           } else {
             $(currentItem).removeClass('reveal-item--is-visible');
+            console.log('Removed.');
           }
         },
-        offset: that.offsetPercentage // will activated at bottom of the viewport
+        // will activated at bottom of the viewport
+        offset: that.offsetPercentage
       });
     });
     /* eslint-enable */

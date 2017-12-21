@@ -26,7 +26,7 @@ class Modal {
 
   openModal() {
     this.modal.addClass('modal--is-visible');
-    // Don't let the user automatically scroll up to top of the page when it clicked a blank href link
+    // Won't let the user automatically scroll up to top of the page when it clicked a blank href link
     // returning false will prevent that default behavior
     return false;
   }

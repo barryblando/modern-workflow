@@ -4,7 +4,7 @@
   "description": "ES6+, PostCSS, Webpack, Gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --progress --watch"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "jquery-smooth-scroll": "^2.2.0",
+    "lazysizes": "^4.0.1",
     "normalize.css": "^7.0.0",
     "perfectionist": "^2.4.0",
     "run-sequence": "^2.2.0",
