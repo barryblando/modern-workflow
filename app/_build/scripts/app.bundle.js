@@ -11349,12 +11349,21 @@ var StickyHeader = function () {
     this.refreshWaypoints();
   }
 
+  /**
+   * We don't to create this method on other class with waypoints
+   * 'cause this package automatically import itself, applied in the global window scope
+   * whenever there is Waypoint object when we call it.
+   * P.S this refresh method will Fix lazyload for interrupting the waypoints
+   * @Barry StickyHeader
+   */
+
+
   _createClass(StickyHeader, [{
     key: 'refreshWaypoints',
     value: function refreshWaypoints() {
       /* eslint-disable */
-      // Fixed lazyload for interrupting the waypoints
-      this.lazyImages.load(function () {
+      // url.indexOf is not a function load => on('load', fn)
+      this.lazyImages.on('load', function () {
         Waypoint.refreshAll();
       });
       /* eslint-enable */
