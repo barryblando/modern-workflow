@@ -1,8 +1,8 @@
 .testimonial {
   background-color: rgba(255, 255, 255, .8);
-  /* give padding bottom 1px to push up against for containing div bottom margin same on all devices*/
+  /* Padding bottom 1px to push up against for containing div bottom margin same on all devices*/
   padding: 0 18px 1px 18px;
-  /* 80px + 18px */
+  /* Margin bottom 80px + 18px for smaller screen */
   margin-bottom: 98px;
 
   @mixin atLarge {
