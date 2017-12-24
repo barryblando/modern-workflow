@@ -1,11 +1,9 @@
-import G from 'gulp';
-import svgS from 'gulp-svg-sprite';
-import GR from 'gulp-rename';
-import D from 'del';
-import RS from 'run-sequence';
-import S2P from 'gulp-svg2png';
-
-const [gulp, svgSprite, rename, del, runSequence, svg2png] = [G, svgS, GR, D, RS, S2P];
+import gulp from 'gulp';
+import svgSprite from 'gulp-svg-sprite';
+import rename from 'gulp-rename';
+import del from 'del';
+import runSequence from 'run-sequence';
+import svg2png from 'gulp-svg2png';
 
 const config = {
   shape: {
@@ -43,14 +41,14 @@ gulp.task('beginClean', () => del(['./app/_build/sprite', './app/assets/images/s
 
 /* Generate svg & css and put it to _build */
 gulp.task('createSprite', ['beginClean'], () => {
-  console.log('Creating Sprites');
+  console.log('---------> Creating Sprites...');
   return gulp.src('./app/assets/images/icons/**/*.svg')
     .pipe(svgSprite(config))
     .pipe(gulp.dest('./app/_build/sprite/'));
 });
 
 gulp.task('createPngCopy', ['createSprite'], () => {
-  console.log('Copying SVG to PNG');
+  console.log('---------> Copying SVG to PNG...');
   return gulp.src('./app/_build/sprite/css/*.svg')
     .pipe(svg2png())
     .pipe(gulp.dest('./app/_build/sprite/css'));
@@ -58,14 +56,14 @@ gulp.task('createPngCopy', ['createSprite'], () => {
 
 /* After generating, create  a copy of svg for assets */
 gulp.task('copySpriteGraphic', ['createPngCopy'], () => {
-  console.log('Copying Sprite Graphics');
+  console.log('---------> Copying Sprite Graphics...');
   return gulp.src('./app/_build/sprite/css/**/*.{svg,png}')
     .pipe(gulp.dest('./app/assets/images/sprites'));
 });
 
 /* After generating css, create a copy for modules */
 gulp.task('copySpriteCSS', ['createSprite'], () => {
-  console.log('Copying Sprite CSS');
+  console.log('---------> Copying Sprite CSS...');
   return gulp.src('./app/_build/sprite/css/*.css')
     .pipe(rename('_sprite.css'))
     .pipe(gulp.dest('./app/assets/styles/modules'));

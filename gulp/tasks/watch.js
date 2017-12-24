@@ -1,10 +1,7 @@
 import G from 'gulp';
 import BS from 'browser-sync';
 
-const [
-  gulp,
-  browserSync
-] = [G, BS.create()];
+const [gulp, browserSync] = [G, BS.create()];
 
 const [reload] = [browserSync.reload];
 

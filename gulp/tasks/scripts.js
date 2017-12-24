@@ -1,9 +1,7 @@
-import G from 'gulp';
-import WP from 'webpack';
+import gulp from 'gulp';
+import webpack from 'webpack';
 
 const rWebpack = require('../../webpack.config.js');
-
-const [gulp, webpack] = [G, WP];
 
 gulp.task('scripts', ['modernizr'], (callback) => {
   webpack(rWebpack, (err, stats) => {

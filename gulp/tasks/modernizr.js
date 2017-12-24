@@ -1,7 +1,5 @@
-import G from 'gulp';
-import GM from 'gulp-modernizr';
-
-const [gulp, modernizr] = [G, GM];
+import gulp from 'gulp';
+import modernizr from 'gulp-modernizr';
 
 /* eslint-disable */
 gulp.task('modernizr', () => {

@@ -1,29 +1,14 @@
-import G from 'gulp';
-import PC from 'gulp-postcss';
-import AP from 'autoprefixer';
-import pcSV from 'postcss-simple-vars';
-import pcNested from 'postcss-nested';
-import CI from 'postcss-import';
-import P from 'perfectionist';
-import MIX from 'postcss-mixins';
-import MC from 'gulp-minify-css';
-import HR from 'postcss-hexrgba';
+import gulp from 'gulp';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import cssvars from 'postcss-simple-vars';
+import nested from 'postcss-nested';
+import cssImport from 'postcss-import';
+import perfectionist from 'perfectionist';
+import mixins from 'postcss-mixins';
+import minifyCss from 'gulp-minify-css';
+import hexrgba from 'postcss-hexrgba';
 import reload from './watch';
-
-/** (Destructuring) */
-
-const [
-  gulp,
-  postcss,
-  autoprefixer,
-  cssvars,
-  nested,
-  cssImport,
-  perfectionist,
-  mixins,
-  minifyCss,
-  hexrgba
-] = [G, PC, AP, pcSV, pcNested, CI, P, MIX, MC, HR];
 
 /** (Data Structure Paths) */
 
@@ -33,12 +18,9 @@ const paths = {
 };
 
 gulp.task('cssInject', function () {
-  console.log('-----------Streaming PostCSS');
+  console.log('---------> Streaming PostCSS');
   return gulp.src(`${paths.SRC}`)
     .pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer, perfectionist({ indentSize: 2 })]))
-    /* .pipe(minifyCss({
-      keepSpecialComments: 0
-    })) */
     .on('error', (errorInfo) => {
       console.log(errorInfo.toString());
       this.emit('end');
