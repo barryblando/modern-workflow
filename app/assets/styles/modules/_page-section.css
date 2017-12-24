@@ -35,7 +35,7 @@
     @mixin atLarge {
       &.lazyloaded {
         /* Will be applied when lazyload class invoked */
-        background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+        background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
         /* Adjust image size to perfectly cover the containing div */
         background-size: cover;
       }

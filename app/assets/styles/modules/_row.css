@@ -101,6 +101,7 @@
   }
 
   /* Begin Equal Height Rules */
+  /* .flexbox in order for modernizr to process browser compatibility */
   .flexbox &--equal-height-at-medium {
     @mixin atMedium  {
       display: flex;
