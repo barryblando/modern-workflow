@@ -998,6 +998,15 @@ a {
   }
 }
 
+.testimonial:hover {
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+  -webkit-transition: -webkit-transform .3s ease-out;
+          transition: -webkit-transform .3s ease-out;
+          transition: transform .3s ease-out;
+          transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+}
+
 .testimonial--last {
   /* set .testimonial margin-bottom & .page-section padding-bottom to 0 for smaller screen */
   margin-bottom: 0;

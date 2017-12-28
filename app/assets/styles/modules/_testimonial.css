@@ -11,6 +11,11 @@
     padding: 0 1.8125rem 1px 1.8125rem;
   }
 
+  &:hover {
+    transform: translateY(-5%);
+    transition: transform .3s ease-out;
+  }
+
   &--last {
     /* set .testimonial margin-bottom & .page-section padding-bottom to 0 for smaller screen */
     margin-bottom: 0;
