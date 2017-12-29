@@ -47,7 +47,6 @@
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^4.0.0",
-    "gulp-minify-css": "^1.2.4",
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",

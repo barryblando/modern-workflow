@@ -6,7 +6,6 @@ import nested from 'postcss-nested';
 import cssImport from 'postcss-import';
 import perfectionist from 'perfectionist';
 import mixins from 'postcss-mixins';
-import minifyCss from 'gulp-minify-css';
 import hexrgba from 'postcss-hexrgba';
 import reload from './watch';
 
