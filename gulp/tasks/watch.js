@@ -10,7 +10,8 @@ gulp.task('watch', () => {
     notify: false,
     server: {
       baseDir: './app/'
-    }
+    },
+    port: 3000
   });
 
   gulp.watch('./app/assets/styles/**/*.css', ['cssInject']);
