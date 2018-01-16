@@ -19,7 +19,13 @@ You can see a complete working example [here](https://barryblando.github.io/mode
 
 * Smooth scrolling to anchor links
 
-* Responsive web design (RWD): mobile-first approach, responsive images
+* Responsive web design (RWD): Mobile-first approach, Responsive images
+
+  -[What are Mobile-First and Desktop-First approaches?](https://zellwk.com/blog/how-to-write-mobile-first-css/)
+
+  -[Why does mobile first responsive design tend to not use max-width queries alongside the min-width queries?](https://stackoverflow.com/questions/19472199/why-does-mobile-first-responsive-design-tend-to-not-use-max-width-queries-alongs)
+
+  -[An Introduction to Mobile-First Media Queries](https://www.sitepoint.com/introduction-mobile-first-media-queries/)
 
 * Support for responsive images and svg icons in legacy browsers
 
