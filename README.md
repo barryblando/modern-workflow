@@ -127,7 +127,7 @@ Run the following command (all files will be put inside the folder "docs")
 
 * For Mobile First Patterns to 4K Resolution and Up, I use [SIZZY](http://sizzy.co/) for Responsive Test
 
-  * 1920w ( 1920px Wide of Image), on the source, large images must be put first in order for browser to understand and which one to choose based on the devices width, screen size, and pixel density
+  * 1920w ( 1920px Wide of Image), on the source, smaller images must be put first (In order for browser to understand and which one to choose based on the devices width, screen size, and pixel density) and followed up by large images, when doing Mobile first Approach you gotta use min-width, Where in Desktop Approach you should use max width. (Vice-Versa)
 
   [CSS Tricks: Responsive Images](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
   [Sitepoint: Responsive Images](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)
@@ -135,9 +135,9 @@ Run the following command (all files will be put inside the folder "docs")
   ```html
     <picture>
       <source media="(min-width: 1380px)" srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w">
-      <source media="(min-width: 990px)" srcset="assets/images/hero--medium.jpg 1380px, assets/images/hero--medium-hi-dpi.jpg 2760w">
-      <source media="(min-width: 640px)" srcset="assets/images/hero--small.jpg, assets/images/hero--small-hi-dpi.jpg">
-      <img src="assets/images/hero--smaller.jpg" alt="Coastal view of ocean and mountains">
+      <source media="(min-width: 990px)" srcset="assets/images/hero--medium.jpg 1380w, assets/images/hero--medium-hi-dpi.jpg 2760w">
+      <source media="(min-width: 640px)" srcset="assets/images/hero--small.jpg 990w, assets/images/hero--small-hi-dpi.jpg 1980w">
+      <img srcset="assets/images/hero--smaller.jpg 640w, assets/images/hero--smaller-hi-dpi.jpg 1280w" alt="Coastal view of ocean and mountains">
     </picture>
   ```
 
