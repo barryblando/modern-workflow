@@ -123,7 +123,7 @@ Run the following command (all files will be put inside the folder "docs")
   <a class="btn btn--orange btn--large" ... >
   ```
 
-### Responsive Images and Image resolution using srcset
+### Responsive Images and Image resolution using Resolution & Density Switching and Art Direction
 
 * For Mobile First Patterns to 4K Resolution and Up, I use [SIZZY](http://sizzy.co/) for Responsive Test
 
@@ -141,7 +141,8 @@ Run the following command (all files will be put inside the folder "docs")
     </picture>
   ```
 
-  * sizes means to tell browser that image is going to be displayed at specific sizes instead of full width of the browser, not like hero image that need to take full width of the browser
+  * sizes means to tell browser that image is going to be displayed at current view port width and current display resolution
+
   ```html
   <picture>
     <source sizes="404px" media="(min-width: 1020px)" srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808w">
@@ -151,6 +152,7 @@ Run the following command (all files will be put inside the folder "docs")
   ```
 
   * here I didn't use picture element 'cause I just want to swap resolutions only using srcset, media query starting at 970px, if under 970px mobile won't download hi res / dpi and just dl & use the ~100viewport of device width.
+
   ```html
   <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
   ```
