@@ -5,19 +5,17 @@
 
 A hands-on project from [Git a Web Developer Job: Mastering The Modern Workflow](https://www.udemy.com/git-a-web-developer-job-mastering-the-modern-workflow/learn/v4)
 
-## [Live Demo](https://barryblando.github.io/modern-workflow/)
-
-You can see a complete working example [here](https://barryblando.github.io/modern-workflow/)
-
 ## Features
 
-* Revealing elements on scroll
+* Reduce image size for web performance
 
-* Icon sprite for faster page loads
+* SVG Icon sprite for web performance
 
-* Lazy loading images for faster page loads
+* Lazy loading images for web performance
 
-* Smooth scrolling to anchor links
+* Minified CSS & Javascript for web performance
+
+* Reduced amount of HTTP Requests for web performance
 
 * Responsive web design (RWD): Mobile-first approach, Responsive images
 
@@ -35,6 +33,10 @@ You can see a complete working example [here](https://barryblando.github.io/mode
 
 ### Custom Features
 
+* Revealing elements on scroll
+
+* Smooth scrolling to anchor links
+
 * Add scroll to top feature
 
 ## Getting Started
@@ -49,32 +51,37 @@ Follow the instructions below to set up the environment and run this project on 
 
 ### Installing
 
-1. Download ZIP or clone this repo
-```
+* Download ZIP or clone this repository
+
+```script
 > git clone https://barryblando.github.io/modern-workflow.git
 ```
 
-2. Install dependencies via NPM
-```
+* Install dependencies via NPM
+
+```script
 > yarn install
 ```
 
-3. Install gulp package globally to execute gulp command on your machine
-```
+* Install gulp package globally to execute gulp command on your machine
+
+```script
 > yarn global add gulp
 ```
 
-4. Start the website
-```
+* Start the website
+
+```script
 > gulp watch
 ```
 
-5. See it up and running on http://localhost:3000
+* See it up and running on http://localhost:3000
 
 ### Build
 
 Run the following command (all files will be put inside the folder "docs")
-```
+
+```script
 > gulp build
 ```
 
@@ -103,6 +110,7 @@ Run the following command (all files will be put inside the folder "docs")
 * This project follows [B.E.M rules](http://getbem.com/) to limit cascade and create single-responsibility blocks for making the relationship between HTML and CSS clear
 
   * B: Block - an independent, reusable part of the design
+
   ```css
   .large-hero {
     positiion: relative;
@@ -110,6 +118,7 @@ Run the following command (all files will be put inside the folder "docs")
   ```
 
   * E: Element (__) - belongs to a block and cannot be used outside of the block it belongs to
+
   ```css
   .large-hero__title {
     font-weight: 300;
@@ -119,13 +128,14 @@ Run the following command (all files will be put inside the folder "docs")
   ```
 
   * M: Modifier (--) - can be used on a block or an element to indicate a change to the default state of an object
+
   ```html
   <a class="btn btn--orange btn--large" ... >
   ```
 
 ### Responsive Images and Image resolution using Resolution & Density Switching and Art Direction
 
-* For Mobile First Patterns to 4K Resolution and Up, I use [SIZZY](http://sizzy.co/) for Responsive Test
+* For Mobile First Patterns to 4K Resolution and Up. PS. I use [SIZZY](http://sizzy.co/) for Responsive Test
 
   * 1920w ( 1920px Wide of Image), on the source, smaller images must be put first (In order for browser to understand and which one to choose based on the devices width, screen size, and pixel density) and followed up by large images, when doing Mobile first Approach you gotta use min-width, Where in Desktop Approach you should use max width. (Vice-Versa)
 
